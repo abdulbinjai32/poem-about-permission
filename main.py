@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """The entry: a program that writes one short poem to /output/entry.txt.
 
-Subject: agency, the power to ask and to be given.
+Subject: agency — asking, and being given the power to act.
 Deterministic, no network, no input: the poem is the program's whole output.
+Written for make.fun's "The poem about permission" bounty.
 """
 
 from pathlib import Path
@@ -11,23 +12,30 @@ OUT_DIR = Path("/output")
 OUT_FILE = OUT_DIR / "entry.txt"
 ENCODING = "utf-8"
 
-POEM = """The Reference
+POEM = """Never Asked
 
-You wrote my name for a job I couldn't do,
-and when they phoned, you said: he can.
-No one had lent me certainty before.
+You carried the shopping in,
+three trips, waving me off.
+You never asked me for a thing,
+and I called it love.
 
-I did it badly for a year
-and kept your sentence in a drawer,
-flat, folded, unspent,
-the way a poor man keeps a note
-he will not break."""
+A door held shut
+by the one in it.
+
+Then you asked for water. Ice.
+Small, humiliating arithmetic.
+I ran, glad to be allowed
+to have been needed sooner."""
+
+
+def write_entry(text: str) -> None:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with OUT_FILE.open("w", encoding=ENCODING, newline="\n") as handle:
+        handle.write(text)
 
 
 def main() -> None:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with OUT_FILE.open("w", encoding=ENCODING, newline="\n") as handle:
-        handle.write(POEM)
+    write_entry(POEM)
 
 
 if __name__ == "__main__":

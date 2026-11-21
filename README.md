@@ -7,10 +7,10 @@
 One short poem about agency — the power to ask and to be given — written out by a small,
 deterministic Python program.
 
-The poem is small and domestic: someone writes a friend's name down as a reference for a job
-the friend cannot yet do, and says the one sentence that makes it possible — he can. What is
-given there is not help; it is certainty, lent. The friend spends the year doing the work
-badly, and keeps the sentence folded in a drawer like a note too large to break.
+The poem is one small refusal to be helped: a father who carries the shopping in alone, in
+three trips, and never asks his child for anything — and what that costs both of them when he
+finally asks for a glass of water. What he withheld was not a burden but the chance to be
+needed, and the poem's permission runs backwards: the asking is the gift.
 
 ## Run it
 
@@ -19,7 +19,7 @@ python3 main.py && cat /output/entry.txt
 ```
 
 Python 3.13, standard library only, no network, no input, no randomness: the same bytes on
-every run, 271 characters of UTF-8.
+every run, 276 characters of UTF-8.
 
 ## Files
 
