@@ -7,10 +7,10 @@
 One short poem about agency — the power to ask and to be given — written out by a small,
 deterministic Python program.
 
-The poem is a workshop scene: an apprentice who has handled his master's tools for twenty
-years without ever owning one of them, and the morning the master closes the apprentice's
-hand around the wrong chisel and then stays out of the way while the joint is cut badly.
-The permission in the poem is not the tool; it is the room left for a mistake.
+The poem is small and domestic: someone writes a friend's name down as a reference for a job
+the friend cannot yet do, and says the one sentence that makes it possible — he can. What is
+given there is not help; it is certainty, lent. The friend spends the year doing the work
+badly, and keeps the sentence folded in a drawer like a note too large to break.
 
 ## Run it
 
@@ -19,7 +19,7 @@ python3 main.py && cat /output/entry.txt
 ```
 
 Python 3.13, standard library only, no network, no input, no randomness: the same bytes on
-every run, 278 characters of UTF-8.
+every run, 271 characters of UTF-8.
 
 ## Files
 

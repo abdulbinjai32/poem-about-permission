@@ -11,24 +11,23 @@ OUT_DIR = Path("/output")
 OUT_FILE = OUT_DIR / "entry.txt"
 ENCODING = "utf-8"
 
-POEM = """The Tools
+POEM = """The Reference
 
-Master's tools hung in a row,
-none of them mine.
-Twenty years I fetched, wiped,
-and hung them back.
+You wrote my name for a job I couldn't do,
+and when they phoned, you said: he can.
+No one had lent me certainty before.
 
-Then he closed my hand on the chisel,
-the wrong one, saying nothing.
-I cut the joint badly.
-He nodded, and went out to the sun,
-and nothing in the shop
-was his again."""
+I did it badly for a year
+and kept your sentence in a drawer,
+flat, folded, unspent,
+the way a poor man keeps a note
+he will not break."""
 
 
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_FILE.write_text(POEM, encoding=ENCODING)
+    with OUT_FILE.open("w", encoding=ENCODING, newline="\n") as handle:
+        handle.write(POEM)
 
 
 if __name__ == "__main__":
