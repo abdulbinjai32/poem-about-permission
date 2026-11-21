@@ -7,26 +7,28 @@ Deterministic, no network, no input: the poem is the program's whole output.
 
 from pathlib import Path
 
-POEM = """Power of Attorney
+OUT_DIR = Path("/output")
+OUT_FILE = OUT_DIR / "entry.txt"
+ENCODING = "utf-8"
 
-She practiced her name on a receipt,
-pencil, then ink,
-then signed the page
-that sells her house.
-She looked up like a girl
-done with a hard test
+POEM = """The Tools
 
-Each morning she asks
-if she may have her pills.
-I say yes. I say it
-as though the yes were still
-hers to give."""
+Master's tools hung in a row,
+none of them mine.
+Twenty years I fetched, wiped,
+and hung them back.
+
+Then he closed my hand on the chisel,
+the wrong one, saying nothing.
+I cut the joint badly.
+He nodded, and went out to the sun,
+and nothing in the shop
+was his again."""
 
 
 def main() -> None:
-    out = Path("/output")
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "entry.txt").write_text(POEM, encoding="utf-8")
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_FILE.write_text(POEM, encoding=ENCODING)
 
 
 if __name__ == "__main__":
